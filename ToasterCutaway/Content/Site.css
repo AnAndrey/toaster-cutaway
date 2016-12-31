@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.group {
+    position:relative;
+    top: 10px;
+    column-gap: 10px;
+    column-rule: 0px transparent;
+    column-count:3;
+    column-fill: auto;
+
+}
+#photos {
+    margin-bottom:3px;
+    width: 100%;
+}

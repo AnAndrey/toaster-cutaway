@@ -208,6 +208,20 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Photo\132.jpg" />
+    <Content Include="Content\Images\Photo\2.jpg" />
+    <Content Include="Content\Images\Photo\3.jpg" />
+    <Content Include="Content\Images\Photo\4093500.jpg" />
+    <Content Include="Content\Images\Photo\5.jpg" />
+    <Content Include="Content\Images\Photo\52.jpg" />
+    <Content Include="Content\Images\Photo\6 %282%29.jpg" />
+    <Content Include="Content\Images\Photo\6.jpg" />
+    <Content Include="Content\Images\Photo\76.jpg" />
+    <Content Include="Content\Images\Photo\foto2_1493.jpg" />
+    <Content Include="Content\Images\Photo\Igor-Nikolaev.jpg" />
+    <Content Include="Content\Images\Photo\images.jpg" />
+    <Content Include="Content\Images\Photo\rt.jpg" />
+    <Content Include="Content\Images\Photo\sv1.jpg" />
     <Content Include="Content\Images\portret.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
