@@ -1,9 +1,31 @@
 ﻿@{
     ViewBag.Title = "Photos";
 }
+<div id="gallery"></div>
 
+<script>window.jQuery || document.write('<script src="~/Scripts/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="~/Scripts/jquery.galereya.js"></script>
+<script>
+    $(function() {
+        $('#gallery').galereya({
+            load: function(next) {
 
-<div class="group photo">
+                $.ajax({
+                    url: "/api/photos",
+                    method: "GET",
+                    success: function(data) {
+                        next(data);
+                    
+                    }
+                });
+            }
+        }); 
+           
+    });
+
+</script>
+
+@*<div class="group photo">
     <div class="photoswithfriends"><img id="photos" src="~/Content/Images/Photo/132.jpg" /></div>
     <div class="photoswithfriends"><img id="photos" src="~/Content/Images/Photo/3.jpg" /></div>
     <div class="photoswithfriends"><img id="photos" src="~/Content/Images/Photo/4093500.jpg" /></div>
@@ -26,8 +48,24 @@
     </div>
 </div>
 
+
 @section scripts
 {
     @Scripts.Render("~/bundles/photoHelper")
 }
 
+<script>
+    $(document).ready(function () {
+        var elem = document.getElementById("test-p");
+        elem.innerHTML = "soon";
+        $.ajax({
+            url: "/api/photos",
+            method: "GET",
+            success: function(data) {
+                alert(data);
+            }
+        });
+
+    })
+</script>
+*@

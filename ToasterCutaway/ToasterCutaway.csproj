@@ -80,12 +80,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -195,6 +207,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="DTOs\PhotoDto.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Controllers\API\PhotosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -223,10 +239,29 @@
     <Content Include="Content\Images\Photo\rt.jpg" />
     <Content Include="Content\Images\Photo\sv1.jpg" />
     <Content Include="Content\Images\portret.jpg" />
+    <Content Include="Content\jquery.galereya.css" />
+    <Content Include="Content\jquery.galereya.ie.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\black_lozenge.png" />
+    <Content Include="img\black_lozenge_%402X.png" />
+    <Content Include="img\galereya-arrow_down%402x.png" />
+    <Content Include="img\galereya-arrow_down.png" />
+    <Content Include="img\galereya-arrow_next%402x.png" />
+    <Content Include="img\galereya-arrow_next.png" />
+    <Content Include="img\galereya-arrow_prev%402x.png" />
+    <Content Include="img\galereya-arrow_prev.png" />
+    <Content Include="img\galereya-arrow_up%402x.png" />
+    <Content Include="img\galereya-arrow_up.png" />
+    <Content Include="img\galereya-close%402x.png" />
+    <Content Include="img\galereya-close.png" />
+    <Content Include="img\galereya-pause%402x.png" />
+    <Content Include="img\galereya-pause.png" />
+    <Content Include="img\galereya-play%402x.png" />
+    <Content Include="img\galereya-play.png" />
+    <Content Include="img\galereya-slider-loader.gif" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -234,10 +269,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\galereya.jquery.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.galereya.js" />
+    <Content Include="Scripts\jquery.galereya.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
